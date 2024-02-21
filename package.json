@@ -1,0 +1,19 @@
+{
+  "name": "js2-course-assignment",
+  "version": "1.0.0",
+  "description": "JS2 Course Assignment",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "parcel": "^2.11.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
