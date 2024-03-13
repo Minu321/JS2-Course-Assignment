@@ -1,0 +1,122 @@
+<!DOCTYPE html data-bs-theme="dark">
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/3d84ee808b.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Login to Twittler to access your account and connect with friends. Stay updated with the latest tweets and conversations from people you follow."
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link href="/src/css/styles.scss" rel="stylesheet" />
+    <script
+      defer
+      src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <title>Twittler | Log in</title>
+  </head>
+  <body data-bs-theme="dark">
+    <header class="text-bg-secondary p-0 bg-dark">
+        <nav class="navbar navbar-expand-lg text-bg-info p-3">
+          <div class="container-fluid">
+            <p class="h3">Twittler<i class="fa-solid fa-kiwi-bird"></i></p>
+  
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon bg-dark rounded"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav bg-dark rounded">
+                <li class="nav-item">
+                  <a class="nav-link m-3" href="/profile/login/">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link m-3" href="/profile/register/">Register</a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link m-3" href="#">Help & Services</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <main>
+        <div class="container mt-5 text-bg-secondary p-3 rounded w-75">
+            <h2 class="mb-4">Login</h2>
+            <form id="loginUser" >
+             
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input
+                  type="email"
+                  required
+                  pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+                  title="Only @(stud.)noroff.no domains are allowed to register"
+                  class="form-control mb-3"
+                  id=""
+                  name="email"
+                  required
+                />
+               
+    
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control mb-3"
+                  id="password"
+                  name="password"
+                  minlength="8"
+                  required
+                />
+                
+                
+              
+    
+              <div class="mb-3">
+                <a class="btn btn-secondary" href=".././../src/index.html">Back</a>
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+            </form>
+          </div>
+    </main>
+    <footer class="bg-dark text-light mt-5 py-4 fixed-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Twittler</h5>
+            <p>&copy; 2024 All rights reserved</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Home</a></li>
+              <li class="list-inline-item"><a href="#">About</a></li>
+              <li class="list-inline-item"><a href="#">Contact</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../../src/js/app.mjs"></script>
+  </body>
+</html>

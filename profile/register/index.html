@@ -13,20 +13,21 @@
     />
     <link
       rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link href="/src/css/styles.scss" rel="stylesheet" />
     <script
       defer
-      src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+      src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
     ></script>
     <title>Twittler | Log in</title>
   </head>
   <body data-bs-theme="dark">
-    <header class="text-bg-secondary p-3 bg-dark">
+    <header class="text-bg-secondary p-0 bg-dark">
       <nav class="navbar navbar-expand-lg text-bg-info p-3">
         <div class="container-fluid">
-          <h1 class="h1">Twittler</h1>
+          <p class="h3">Twittler<i class="fa-solid fa-kiwi-bird"></i></p>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -44,16 +45,14 @@
           >
             <ul class="navbar-nav bg-dark rounded">
               <li class="nav-item">
-                <a class="nav-link m-3" href="feed.html">Feed</a>
+                <a class="nav-link m-3" href="/profile/login/">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link m-3" href="../profile/">Profile</a>
+                <a class="nav-link m-3" href="/profile/register/">Register</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link m-3" href="#">Help & Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link m-3" href="index.html">Log out</a>
               </li>
             </ul>
           </div>
@@ -62,25 +61,34 @@
     </header>
     <main>
       <div class="container mt-5 text-bg-secondary p-3 rounded">
-        <form
-          action="/profile"
-          method="post"
-          class="needs-validation"
-          novalidate
-        >
-          <h2 class="mb-4">Register</h2>
-
+        <h2 class="mb-4">Register</h2>
+        <form id="registerUser" >
           <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
+            <label for="name" class="form-label">Name</label>
             <input
               type="text"
+              title="Must only contain upper and lower case letters, numbers and underscores."
+              required
+              pattern="^[\w]+$"
               class="form-control"
               id="username"
-              name="username"
+              name="name"
               required
             />
-            <div class="invalid-feedback">Please enter a username.</div>
           </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input
+              type="email"
+              required
+              pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+              title="Only @(stud.)noroff.no domains are allowed to register"
+              class="form-control"
+              id=""
+              name="email"
+              required
+            />
+           
 
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
@@ -92,36 +100,38 @@
               minlength="8"
               required
             />
-            <div class="invalid-feedback">
-              Password must be at least 8 characters long.
-            </div>
+            <div class="help" >Must be at least 8 characters.</div>
+            
+          </div>
+          <div title="Optional, banner and avatar can be added later." class="form-select mb-3">
+            <label for="banner" class="form-label">Banner</label>
+            <input type="url" class="form-control" name="banner" />
+            <label for="avatar" class="form-label">Avatar</label>
+            <input type="url" class="form-control mb-3" name="avatar" />
           </div>
           <div class="col-12 mb-4">
             <div class="form-check">
-              <input
+              <label class="form-check-label" for="Check">
+                Agree to terms and conditions </label
+              ><input
                 class="form-check-input"
                 type="checkbox"
-                value=""
+                title="You must agree to the terms and conditions before you can register."
+                value="1"
                 id="Check"
                 required
               />
-              <label class="form-check-label" for="Check">
-                Agree to terms and conditions
-              </label>
-              <div class="invalid-feedback">
-                You must agree before submitting.
-              </div>
             </div>
           </div>
 
           <div class="mb-3">
-            <a class="btn btn-primary" href=".././../src/index.html">Back</a>
-            <button type="submit" class="btn btn-secondary">Register</button>
+            <a class="btn btn-secondary" href=".././../src/index.html">Back</a>
+            <button type="submit" class="btn btn-primary">Register</button>
           </div>
         </form>
       </div>
     </main>
-    <footer class="bg-dark text-light mt-5 py-3 fixed-bottom">
+    <footer class="bg-dark text-light mt-5 py-3 ">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -155,6 +165,8 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="./js/app.mjs"></script>
+    <script type="module" src="../../src/js/app.mjs"></script>
+    
   </body>
 </html>
+
