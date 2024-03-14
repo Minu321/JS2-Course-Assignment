@@ -1,0 +1,176 @@
+<!DOCTYPE html data-bs-theme="dark">
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/3d84ee808b.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the latest tweets and updates from your friends and followers on Twittler's feed page. Discover new content, engage in conversations, and stay connected."
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link href="/src/css/styles.scss" rel="stylesheet" />
+    <script
+      defer
+      src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <title>Twittler | Feed</title>
+  </head>
+  <body data-bs-theme="dark">
+    <header class="text-bg-secondary p-0 bg-dark">
+        <nav class="navbar navbar-expand-lg text-bg-info p-3">
+          <div class="container-fluid">
+            <p class="h3">Twittler<i class="fa-solid fa-kiwi-bird"></i></p>
+  
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon bg-dark rounded"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav bg-dark rounded">
+                <li class="nav-item">
+                  <a class="nav-link m-3" href="/profile/login/">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link m-3" href="/profile/register/">Feed</a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link m-3" href="#">Help & Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link m-3" href="#">Log out</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <main class="container mt-4">
+      <div class="mb-4  p-3 rounded">
+        <h3 class="mb-3 text-bg-secondary p-3 rounded">Create a New Post</h3>
+        <form>
+          <div class="mb-3 ">
+            <label for="postImage" class="form-label">Image URL:</label>
+            <input type="text" class="form-control" id="postImage" required />
+          </div>
+          <div class="mb-3">
+            <label for="postCaption" class="form-label">Caption:</label>
+            <textarea
+              class="form-control"
+              id="postCaption"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Post</button>
+        </form>
+      </div>
+   
+      <div class="mb-4 text-bg-secondary p-3 rounded">
+        <h3>Search</h3>
+        <input type="text" class="form-control" placeholder="Search..." />
+      </div>
+
+    
+      <div class="mb-4 text-bg-secondary p-3 rounded">
+        <label for="sortOptions" class="form-label">Sort by:</label>
+        <select id="sortOptions" class="form-select">
+          <option value="latest">Latest</option>
+          <option value="popular">Popular</option>
+          <option value="trending">Trending</option>
+        </select>
+      </div>
+
+      <div class="row mb-4 mt-4 text-bg-secondary p-3 rounded">
+        <h3 class="mb-4">Latest Posts</h3>
+        <ul class="list-group">
+            <div class="card mb-3" >
+               
+                <div class="card-body ">
+                  <h5 class="card-title">Hello!</h5>
+                  <p class="card-text">How r u all doing today?</p>
+                  <a href="#" class="btn btn-primary">Comment</a>
+                  <Button class="btn btn-success"><i class="fa-solid fa-thumbs-up"></i></Button>
+                </div>
+              </div>
+              <div class="card p-3 mb-3" >
+                <img src="" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Here is my cat :D</h5>
+                  <p class="card-text">I know you didn't ask, but here's a photo of my cat!</p>
+                  <a href="#" class="btn btn-primary">Comment</a>
+                  <Button class="btn btn-success"><i class="fa-solid fa-thumbs-up"></i></Button>
+                </div>
+              </div>
+              <div class="card" >
+               
+                <div class="card-body">
+                  <h5 class="card-title">I went on a hike today..</h5>
+                  <p class="card-text">I went on a 1H long hike today, never again. Physical activity just isn't for me.</p>
+                  <a href="#" class="btn btn-primary">Comment</a>
+                  <Button class="btn btn-success"><i class="fa-solid fa-thumbs-up"></i></Button>
+                </div>
+              </div>
+              
+
+        </ul>
+      </div>
+    </div>
+
+    </main>
+    <footer class="bg-dark text-light mt-5 py-3 ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Twittler</h5>
+            <p>&copy; 2024 All rights reserved</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Home</a></li>
+              <li class="list-inline-item"><a href="#">About</a></li>
+              <li class="list-inline-item"><a href="#">Contact</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+
+       
+        <div class="row mt-3">
+          <div class="col-md-12 text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+              </li>
+           
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../src/js/app.mjs"></script>
+  </body>
+</html>
