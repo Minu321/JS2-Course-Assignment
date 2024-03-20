@@ -31,10 +31,10 @@ if (path == "/profile/login/") {
 
 postMethods.getPosts().then(console.log);
 
-//async function testTemplate() {
-//const posts = await postMethods.getPosts();
-//const post = posts;
-//const container = document.querySelector("#post");
-// templates.renderPostTemplates(post, container);
-//}
-//testTemplate();
+async function testTemplate() {
+  const posts = await postMethods.getPosts();
+  const post = posts;
+  const container = document.querySelector("#post");
+  templates.renderPostTemplates(post, container);
+}
+testTemplate();

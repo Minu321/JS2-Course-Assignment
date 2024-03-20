@@ -15,12 +15,16 @@ export async function login(profile) {
     method,
     body,
   });
+  if (response.ok) {
+    const { accessToken, ...user } = await response.json();
 
-  const { accessToken, ...user } = await response.json();
+    storage.save("token", accessToken);
 
-  storage.save("token", accessToken);
+    storage.save("profile", user);
 
-  storage.save("profile", user);
-
-  alert("You are now logged in");
+    alert("You are now logged in");
+    window.location.href = "/profile/index.html";
+  } else {
+    alert("Login failed. Please try again.");
+  }
 }
